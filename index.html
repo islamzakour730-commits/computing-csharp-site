@@ -4,22 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>وحدة الحوسبة – C#</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <span style="font-size:18px;">💻</span>
+        <span>وحدة الحوسبة – C#</span>
+      </a>
 
-  <h1>وحدة الحوسبة – مقدمة في C#</h1>
-  <p>هذا موقع تعليمي لمشروع نهائي في موضوع الحوسبة.</p>
+      <nav class="nav" aria-label="التنقل الرئيسي">
+        <a href="index.html" style="color:var(--text); border-color: rgba(42,53,99,.7); background: rgba(15,23,48,.5);">الرئيسية</a>
+        <a href="lessons.html">الوحدة التعليمية</a>
+        <a href="plans.html">خطط الدروس</a>
+        <a href="ai.html">الذكاء الاصطناعي</a>
+        <a href="lab-3d.html">المختبر 3D</a>
+      </nav>
+    </div>
+  </header>
 
-  <hr>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <span class="badge">مشروع نهائي — حوسبة</span>
+        <h1>وحدة الحوسبة – مقدمة في C#</h1>
+        <p>
+          موقع تعليمي يحتوي على وحدة تعليمية، خطط دروس بنِسب متنوعة (تقليدي/محوسب/ذكاء اصطناعي/تعاوني)،
+          بالإضافة إلى مختبر ثلاثي الأبعاد ومحتوى داعم للتقييم.
+        </p>
 
-  <nav>
-    <ul>
-      <li><a href="lessons.html">الوحدة التعليمية</a></li>
-      <li><a href="plans.html">خطط الدروس</a></li>
-      <li><a href="ai.html">الذكاء الاصطناعي في التدريس</a></li>
-      <li><a href="lab-3d.html">المختبر ثلاثي الأبعاد</a></li>
-    </ul>
-  </nav>
+        <div class="actions">
+          <a class="btn primary" href="lessons.html">ابدأ التعلم</a>
+          <a class="btn" href="lab-3d.html">المختبر 3D</a>
+          <a class="btn ghost" href="ai.html">كيف استخدمنا AI؟</a>
+        </div>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="grid">
+        <div class="card span-6">
+          <h2>مكونات الموقع</h2>
+          <ul class="list">
+            <li>الوحدة التعليمية (دروس C#)</li>
+            <li>خطط دروس حسب النِسب المطلوبة</li>
+            <li>صفحة الذكاء الاصطناعي + Prompts</li>
+            <li>مختبر 3D تعليمي</li>
+          </ul>
+        </div>
+
+        <div class="card span-6">
+          <h2>هدفنا</h2>
+          <p>
+            تقديم تجربة تعلم واضحة وتفاعلية لأساسيات الحوسبة عبر C# مع تركيز على الفهم،
+            والتدرّج، والتقييم العادل، واستخدام الذكاء الاصطناعي بشكل مسؤول.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © موقع تعليمي لمشروع نهائي — وحدة الحوسبة (C#)
+    </footer>
+  </main>
 </body>
 </html>
