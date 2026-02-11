@@ -229,16 +229,119 @@
 
   <div style="margin-top:20px;">
     <a class="btn primary"
-       href="https://wayground.com/join?gc=581333"
+       href="https://wayground.com/join?gc=31875062"
        target="_blank">
        🚀 افتح الفلاش كارد
     </a>
   </div>
 
 </div>
+<!-- ===================== -->
+<!-- الدرس الرابع -->
+<!-- ===================== -->
+
+<div class="card" style="margin-top:30px;">
+  <h2 style="margin-top:0;">الدرس الرابع</h2>
+  <p style="opacity:.9;">تعلم تفاعلي – تحليل وفهم نموذج الشبكات عبر أدوات ذكية</p>
+</div>
+
+<section class="grid">
+
+  <div class="card">
+    <h3>الأهداف المضمونية</h3>
+    <ul class="list">
+      <li>تحليل مفاهيم الشبكات باستخدام أدوات الذكاء الاصطناعي.</li>
+      <li>تعميق الفهم عبر أسئلة استكشافية.</li>
+      <li>تطبيق المفاهيم من خلال نشاط تفاعلي (Escape Room).</li>
+      <li>تعزيز التفكير النقدي وحل المشكلات.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>المصطلحات الأساسية</h3>
+    <ul class="list">
+      <li>تحليل المحتوى</li>
+      <li>تفكير استكشافي</li>
+      <li>حل المشكلات</li>
+      <li>تطبيق عملي</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>مهارات القرن 21</h3>
+    <ul class="list">
+      <li>التعلم الذاتي</li>
+      <li>التفكير النقدي</li>
+      <li>التعاون</li>
+      <li>الإبداع</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>ملاحظات تعليمية</h3>
+    <ul class="list">
+      <li>تشجيع الطلاب على طرح أسئلة داخل NotebookLM.</li>
+      <li>العمل ضمن مجموعات لحل لغز Escape Room.</li>
+      <li>مناقشة الحلول بعد إنهاء النشاط.</li>
+    </ul>
+  </div>
+
+</section>
+
+<div class="card" style="margin-top:25px; padding:25px;">
+
+  <div style="display:flex; gap:10px; justify-content:center; margin-bottom:20px;">
+    <button class="btn primary" onclick="showTab('nb')">🤖 NotebookLM</button>
+    <button class="btn" onclick="showTab('escape')">🎮 Escape Room</button>
+  </div>
+
+  <!-- NotebookLM -->
+  <div id="nb" class="tab-content">
+    <h2 style="text-align:center;">NotebookLM</h2>
+    <p style="text-align:center; opacity:.85;">
+      استخدم الأداة لتحليل المحتوى وطرح أسئلة حول نموذج الشبكات.
+    </p>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a class="btn primary"
+         href="https://notebooklm.google.com/notebook/a2059783-186b-4e9d-9faa-d46497165a1f"
+         target="_blank">
+         🚀 افتح NotebookLM
+      </a>
+    </div>
+  </div>
+
+  <!-- Escape Room -->
+  <div id="escape" class="tab-content" style="display:none;">
+    <h2 style="text-align:center;">Museum Escape Room</h2>
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-top:20px;">
+      <iframe 
+        title="Museum Escape Room"
+        frameborder="0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius:16px;"
+        src="https://view.genially.com/665236797f481f0015a28dce"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+</div>
+
+  </div>
+
+</div>
 
 
 </main>
+<script>
+function showTab(tab) {
+  document.getElementById('nb').style.display = "none";
+  document.getElementById('escape').style.display = "none";
+
+  document.getElementById(tab).style.display = "block";
+}
+</script>
 
 </body>
 </html>
