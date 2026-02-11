@@ -54,26 +54,85 @@ Console.WriteLine(x + y);
 
     <div class="grid3">
 
-      <div class="card feature">
-        <div class="iconBox">1</div>
-        <h3>المتغيرات</h3>
-        <p>int, string, double وكيف نستخدمهم.</p>
-        <a class="btn primary" style="margin-top:12px;" href="#">ابدأ</a>
-      </div>
+     <div class="card feature">
+  <div class="iconBox">1</div>
+  <h3>المتغيرات</h3>
 
-      <div class="card feature">
-        <div class="iconBox">2</div>
-        <h3>الشروط</h3>
-        <p>if / else واتخاذ القرار داخل البرنامج.</p>
-        <a class="btn primary" style="margin-top:12px;" href="#">ابدأ</a>
-      </div>
+  <p>المتغير هو مكان لتخزين قيمة داخل البرنامج.</p>
 
-      <div class="card feature">
-        <div class="iconBox">3</div>
-        <h3>الحلقات</h3>
-        <p>for / while وتكرار الأوامر.</p>
-        <a class="btn primary" style="margin-top:12px;" href="#">ابدأ</a>
-      </div>
+  <pre style="background:#111827; padding:15px; border-radius:12px; overflow:auto; direction:ltr; text-align:left;">
+int age = 16;
+string name = "Ahmad";
+double grade = 95.5;
+
+Console.WriteLine(name);
+Console.WriteLine(age);
+Console.WriteLine(grade);
+  </pre>
+
+  <p style="color: rgba(233,238,252,.75); font-size:14px;">
+    int → أعداد صحيحة  
+    string → نص  
+    double → أعداد عشرية
+  </p>
+
+  <a class="btn primary" style="margin-top:12px;" href="lesson1.html">
+    ابدأ الدرس الكامل
+  </a>
+</div>
+
+
+     <div class="card feature">
+  <div class="iconBox">2</div>
+  <h3>الشروط</h3>
+
+  <p>نستخدم if لاتخاذ قرار داخل البرنامج.</p>
+
+  <pre style="background:#111827; padding:15px; border-radius:12px; overflow:auto; direction:ltr; text-align:left;">
+int grade = 85;
+
+if (grade >= 60)
+{
+    Console.WriteLine("ناجح");
+}
+else
+{
+    Console.WriteLine("راسب");
+}
+  </pre>
+
+  <p style="color: rgba(233,238,252,.75); font-size:14px;">
+    البرنامج يفحص الشرط، وإذا تحقق ينفّذ الجزء الأول، وإذا لا ينفّذ else.
+  </p>
+
+  <a class="btn primary" style="margin-top:12px;" href="lesson2.html">
+    ابدأ الدرس الكامل
+  </a>
+</div>
+
+
+    <div class="card feature">
+  <div class="iconBox">3</div>
+  <h3>الحلقات</h3>
+
+  <p>نستخدم الحلقات لتكرار الأوامر أكثر من مرة.</p>
+
+  <pre style="background:#111827; padding:15px; border-radius:12px; overflow:auto; direction:ltr; text-align:left;">
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine(i);
+}
+  </pre>
+
+  <p style="color: rgba(233,238,252,.75); font-size:14px;">
+    الحلقة تطبع الأرقام من 1 إلى 5.
+  </p>
+
+  <a class="btn primary" style="margin-top:12px;" href="lesson3.html">
+    ابدأ الدرس الكامل
+  </a>
+</div>
+
 
     </div>
 
