@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الوحدة التعليمية</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="index.html"><span style="font-size:18px;">📘</span><span>وحدة الحوسبة – C#</span></a>
-      <nav class="nav">
-        <a href="index.html">الرئيسية</a>
-        <a href="lessons.html" style="color:var(--text); border-color: rgba(42,53,99,.7); background: rgba(15,23,48,.5);">الوحدة التعليمية</a>
-        <a href="plans.html">خطط الدروس</a>
-        <a href="ai.html">الذكاء الاصطناعي</a>
-        <a href="lab-3d.html">المختبر 3D</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-card">
-        <span class="badge">قريبًا</span>
-        <h1>الوحدة التعليمية</h1>
-        <p>سنضيف هنا قائمة الدروس (تقليدي/محوسب/AI/AI تعاوني) وروابط المواد.</p>
-        <div class="actions">
-          <a class="btn primary" href="index.html">الرئيسية</a>
-          <a class="btn ghost" href="plans.html">خطط الدروس</a>
-        </div>
-      </div>
-    </section>
-  </main>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html">🧠 وحدة الحوسبة – C#</a>
+    <nav class="nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="lessons.html" style="color:var(--text)">الوحدة التعليمية</a>
+      <a href="plans.html">خطط الدروس</a>
+      <a href="ai.html">الذكاء الاصطناعي</a>
+      <a href="lab-3d.html">المختبر 3D</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="card span-12">
+    <h1>الوحدة التعليمية</h1>
+    <p>
+      تتكون الوحدة من درسين تم إعدادهما باستخدام Chalkie،
+      وتم إدراجهما هنا بصيغة عرض شرائح (PDF) لسهولة التصفح داخل الموقع.
+    </p>
+  </div>
+
+  <!-- الدرس الأول -->
+  <div class="card span-12">
+    <h2>الدرس الأول: أساسيات شبكات الحاسوب ونظام العميل والخادم</h2>
+
+    <iframe 
+      src="assets/lessonchakie3.pdf"
+      style="width:100%; height:750px; border:0; border-radius:16px;">
+    </iframe>
+  </div>
+
+  <!-- الدرس الثاني -->
+  <div class="card span-12">
+    <h2>الدرس الثاني</h2>
+
+    <iframe 
+      src="assets/lessonchakie2.pdf"
+      style="width:100%; height:750px; border:0; border-radius:16px;">
+    </iframe>
+  </div>
+
+</main>
+
 </body>
 </html>
