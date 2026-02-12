@@ -239,6 +239,10 @@ pre{
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+/* Fix: cards inside grid-team should not span full row */
+.grid-team .card{
+  grid-column: auto !important;
+}
 
 @media (max-width: 1000px) {
   .grid-team {
