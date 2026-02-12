@@ -115,40 +115,53 @@
       </ul>
     </div>
 
-    <!-- Gemini C# Tool -->
     <div class="card span-12">
-      <h2>أداة مساعدة بالذكاء الاصطناعي (C#)</h2>
-      <div class="prompt">
-        <pre style="direction:ltr; text-align:left; overflow:auto;">
-using Google.GenAI;
+  <h2>مساعد الذكاء الاصطناعي للطالب (اسأل سؤال وخذ جواب)</h2>
+  <p style="opacity:.9;">اكتب سؤالك عن C# أو الشبكات وسيظهر الرد مباشرة.</p>
 
-internal class Program
-{
-    static async Task CallGemini()
-    {
-        string APIKEY = ""; // ضع المفتاح هنا محليًا فقط
-
-        var client = new Client(apiKey: APIKEY);
-
-        var response = await client.Models.GenerateContentAsync(
-            model: "gemini-2.5-flash",
-            contents: "ما هو لون السماء؟"
-        );
-
-        Console.WriteLine("Res: " + response.Candidates[0].Content.Parts[0].Text);
-    }
-
-    static async Task Main(string[] args)
-    {
-        await CallGemini();
-    }
-}
-        </pre>
-      </div>
-    </div>
-
+  <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
+    <input id="studentQuestion" class="input" placeholder="اكتب سؤالك هنا..." 
+           style="flex:1; min-width:240px; padding:12px 14px; border-radius:14px; border:1px solid rgba(42,53,99,.6); background: rgba(15,23,48,.35); color: var(--text);">
+    <button class="btn primary" onclick="askAI()">إرسال</button>
   </div>
-</section>
+
+  <div id="aiAnswer" class="card" style="margin-top:14px; padding:16px; background: rgba(15,23,48,.35); display:none;">
+    <div style="opacity:.8; margin-bottom:6px;">الجواب:</div>
+    <div id="aiAnswerText" style="white-space:pre-wrap; line-height:1.8;"></div>
+  </div>
+</div>
+
+<script>
+async function askAI(){
+  const q = document.getElementById('studentQuestion').value.trim();
+  if(!q) return;
+
+  const box = document.getElementById('aiAnswer');
+  const text = document.getElementById('aiAnswerText');
+
+  box.style.display = "block";
+  text.textContent = "جاري توليد الإجابة...";
+
+  try{
+    const res = await fetch("/api/ask", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ question: q })
+    });
+
+    if(!res.ok){
+      text.textContent = "صار خطأ بالاتصال (API).";
+      return;
+    }
+
+    const data = await res.json();
+    text.textContent = data.answer || "ما وصلني جواب.";
+  }catch(e){
+    text.textContent = "تعذر الاتصال. افحصي الرابط أو الاستضافة.";
+  }
+}
+</script>
+
 
 
     <footer class="footer">
