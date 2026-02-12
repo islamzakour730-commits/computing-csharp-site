@@ -24,7 +24,7 @@
 
       <nav class="nav" aria-label="التنقل الرئيسي">
         <a href="index.html">الرئيسية</a>
-        <a href="lessons.html">الوحدة التعليمية</a>
+        <a href="lessons.html">وحدة الحوسبة والشبكات</a>
         <a href="plans.html">خطط الدروس</a>
         <a href="ai.html" style="color:var(--text); border-color: rgba(42,53,99,.7); background: rgba(15,23,48,.5);">الذكاء الاصطناعي</a>
         <a href="lab-3d.html">المختبر 3D</a>
@@ -50,88 +50,106 @@
       </div>
     </section>
 
-    <!-- Content Grid -->
-    <section class="section">
-      <div class="grid">
-        <!-- How we used AI -->
-        <div class="card span-7">
-          <h2>كيف استخدمنا الذكاء الاصطناعي؟</h2>
-          <p>
-            استخدمنا الذكاء الاصطناعي كـ “مساعد تعليمي” وليس كبديل عن الطالب، بهدف:
-          </p>
-          <ul class="list">
-            <li>توليد أسئلة متنوعة بمستويات صعوبة مختلفة (تمارين، اختيارات، أسئلة تطبيق).</li>
-            <li>إعطاء تغذية راجعة تدريجية: تلميحات أولًا ثم توضيح الخطأ.</li>
-            <li>اقتراح Rubric للتقييم وربط التقييم بالأهداف.</li>
-            <li>تقديم أمثلة كود قصيرة مع شرح مبسّط.</li>
-          </ul>
+   <section class="section">
+  <div class="grid">
 
-          <div class="prompt">
-            <div class="title">Prompt جاهز (توليد تمارين حسب الهدف)</div>
-            <pre>أنت معلم حوسبة لطلاب ثانوي. 
-اصنع 6 أسئلة تدريبية عن (المتغيرات وأنواع البيانات في C#) مقسمة: سهل/متوسط/صعب.
-ضع الإجابة النموذجية، وخطأين شائعين لكل سؤال، ونصيحة قصيرة لتجنبهما.
-اكتب كل شيء بالعربية وبأسلوب واضح.</pre>
-          </div>
-        </div>
+    <!-- How we used AI -->
+    <div class="card span-7">
+      <h2>كيف استخدمنا الذكاء الاصطناعي؟</h2>
+      <p>
+        استخدمنا الذكاء الاصطناعي كـ "مساعد تعليمي" وليس كبديل عن الطالب، بهدف:
+      </p>
+      <ul class="list">
+        <li>توليد أسئلة متنوعة بمستويات صعوبة مختلفة (تمارين، اختيارات، أسئلة تطبيق).</li>
+        <li>إعطاء تغذية راجعة تدريجية: تلميحات أولًا ثم توضيح الخطأ.</li>
+        <li>اقتراح Rubric للتقييم وربط التقييم بالأهداف.</li>
+        <li>تقديم أمثلة كود قصيرة مع شرح مبسّط.</li>
+      </ul>
+    </div>
 
-        <!-- Rules / ethics -->
-        <div class="card span-5">
-          <h2>ضوابط الاستخدام (مهم للأستاذ)</h2>
-          <p>
-            لضمان تعلم حقيقي، التزمنا بهذه القواعد:
-          </p>
-          <ul class="list">
-            <li>الطالب يكتب الحل أولًا، ثم يستخدم AI للتحقق والتحسين.</li>
-            <li>ممنوع نسخ الحل النهائي بدون فهم (يُطلب شرح شفهي/كتابي).</li>
-            <li>التأكد من صحة الكود بالتجربة داخل Visual Studio / بيئة C#.</li>
-            <li>توثيق: ما الذي أخذه الطالب من AI وما الذي عدّله بنفسه.</li>
-          </ul>
+    <!-- Rules / ethics -->
+    <div class="card span-5">
+      <h2>ضوابط الاستخدام (مهم للأستاذ)</h2>
+      <ul class="list">
+        <li>الطالب يكتب الحل أولًا، ثم يستخدم AI للتحقق والتحسين.</li>
+        <li>ممنوع نسخ الحل النهائي بدون فهم.</li>
+        <li>التأكد من صحة الكود بالتجربة داخل Visual Studio.</li>
+        <li>توثيق ما تم أخذه من AI وما تم تعديله.</li>
+      </ul>
+    </div>
 
-          <p>
-            أداة سريعة داخل الدرس: <span class="kbd">تلميح 1</span> ثم <span class="kbd">تلميح 2</span> ثم <span class="kbd">شرح</span>.
-          </p>
-        </div>
+    <!-- NEW: ربط AI بالدروس -->
+    <div class="card span-12">
+      <h2>كيف يربط الذكاء الاصطناعي بالدروس في وحدتنا؟</h2>
+      <ul class="list">
+        <li><b>البرمجة C#:</b> توليد تمارين + شرح أخطاء شائعة + تلميحات تدريجية.</li>
+        <li><b>الشبكات:</b> تبسيط طبقات OSI + أسئلة مراجعة + سيناريوهات تطبيقية.</li>
+        <li><b>التقييم:</b> إنشاء Rubric + أسئلة اختيار من متعدد + ملاحظات تصحيح.</li>
+        <li><b>التعلم التفاعلي:</b> توجيه وأسئلة متابعة لأنشطة Nearpod و Wayground.</li>
+      </ul>
+    </div>
 
-        <!-- AI for feedback -->
-        <div class="card span-6">
-          <h2>Prompt جاهز (تصحيح كود + تلميحات)</h2>
-          <p>مناسب عند تعليم الأخطاء الشائعة (Debugging) في C#.</p>
-          <div class="prompt">
-            <div class="title">Prompt (Feedback تدريجي)</div>
-            <pre>أنا طالب، هذا كود C# لا يعمل كما يجب. 
-1) لا تعطيني الحل مباشرة. 
+    <!-- Prompt Feedback -->
+    <div class="card span-6">
+      <h2>Prompt جاهز (تصحيح كود + تلميحات)</h2>
+      <div class="prompt">
+        <pre>أنا طالب، هذا كود C# لا يعمل كما يجب.
+1) لا تعطيني الحل مباشرة.
 2) أعطني 3 تلميحات تدريجية.
 3) بعد ذلك اشرح السبب التقني للخطأ ببساطة.
 4) أخيرًا أعطني نسخة مصححة من الكود.
 
 الكود:
 [الصق الكود هنا]</pre>
-          </div>
-        </div>
-
-        <!-- Evaluation rubric -->
-        <div class="card span-6">
-          <h2>أداة تقييم سريعة (Rubric مختصر)</h2>
-          <p>نستخدمه لتقييم تمارين/مشاريع C# بشكل عادل وواضح.</p>
-          <ul class="list">
-            <li><b>الفهم</b>: يشرح ما يفعل الكود ولماذا (0–4)</li>
-            <li><b>الصحة</b>: الكود يعمل ويعطي نتائج صحيحة (0–4)</li>
-            <li><b>الأسلوب</b>: أسماء متغيرات واضحة + ترتيب + تعليقات عند الحاجة (0–2)</li>
-            <li><b>اختبار</b>: جرّب حالات مختلفة (0–2)</li>
-          </ul>
-
-          <div class="prompt">
-            <div class="title">Prompt (تحويل أهداف الدرس إلى Rubric)</div>
-            <pre>حوّل أهداف هذا الدرس إلى Rubric تقييم من 4 معايير (كل معيار 0-4).
-اجعل المعايير قابلة للقياس، وأعط مثالًا سريعًا على مستوى ممتاز لكل معيار.
-الأهداف:
-[الصق أهداف الدرس هنا]</pre>
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
+
+    <!-- Rubric -->
+    <div class="card span-6">
+      <h2>Rubric تقييم مختصر</h2>
+      <ul class="list">
+        <li><b>الفهم</b>: يشرح ما يفعل الكود ولماذا (0–4)</li>
+        <li><b>الصحة</b>: الكود يعمل ويعطي نتائج صحيحة (0–4)</li>
+        <li><b>الأسلوب</b>: أسماء متغيرات واضحة + ترتيب (0–2)</li>
+        <li><b>الاختبار</b>: تجربة حالات مختلفة (0–2)</li>
+      </ul>
+    </div>
+
+    <!-- Gemini C# Tool -->
+    <div class="card span-12">
+      <h2>أداة مساعدة بالذكاء الاصطناعي (C#)</h2>
+      <div class="prompt">
+        <pre style="direction:ltr; text-align:left; overflow:auto;">
+using Google.GenAI;
+
+internal class Program
+{
+    static async Task CallGemini()
+    {
+        string APIKEY = ""; // ضع المفتاح هنا محليًا فقط
+
+        var client = new Client(apiKey: APIKEY);
+
+        var response = await client.Models.GenerateContentAsync(
+            model: "gemini-2.5-flash",
+            contents: "ما هو لون السماء؟"
+        );
+
+        Console.WriteLine("Res: " + response.Candidates[0].Content.Parts[0].Text);
+    }
+
+    static async Task Main(string[] args)
+    {
+        await CallGemini();
+    }
+}
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <footer class="footer">
       © موقع تعليمي لمشروع نهائي — وحدة الحوسبة (C#)
