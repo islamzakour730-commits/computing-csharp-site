@@ -78,7 +78,7 @@
           </ul>
         </div>
 
-        <!-- NEW: ربط AI بالدروس -->
+        <!-- ربط AI بالدروس -->
         <div class="card span-12">
           <h2>كيف يربط الذكاء الاصطناعي بالدروس في وحدتنا؟</h2>
           <ul class="list">
@@ -115,18 +115,30 @@
           </ul>
         </div>
 
-        <!-- Student AI helper -->
+        <!-- ✅ مساعد الطالب (محاكاة تعليمية بدون API) -->
         <div class="card span-12">
-          <h2>مساعد الذكاء الاصطناعي للطالب (اسأل سؤال وخذ جواب)</h2>
-          <p style="opacity:.9;">اكتب سؤالك عن C# أو الشبكات وسيظهر الرد مباشرة.</p>
+          <h2>مساعد الذكاء الاصطناعي للطالب (محاكاة تعليمية)</h2>
+          <p style="opacity:.9;">
+            نموذج توضيحي لكيف يمكن للذكاء الاصطناعي دعم الطالب داخل وحدة الحوسبة (بدون اتصال خارجي).
+          </p>
 
           <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-            <input id="studentQuestion" placeholder="اكتب سؤالك هنا..."
-              style="flex:1; min-width:240px; padding:12px 14px; border-radius:14px; border:1px solid rgba(42,53,99,.6); background: rgba(15,23,48,.35); color: var(--text);">
+            <input id="studentQuestion"
+              placeholder="اكتب سؤالك عن C# أو الشبكات..."
+              style="flex:1; min-width:240px; padding:12px 14px; border-radius:14px;
+              border:1px solid rgba(42,53,99,.6);
+              background: rgba(15,23,48,.35); color: var(--text);">
+
             <button class="btn primary" onclick="askAI()">إرسال</button>
           </div>
 
-          <div id="aiAnswer" class="card" style="margin-top:14px; padding:16px; background: rgba(15,23,48,.35); display:none;">
+          <div id="aiAnswer"
+            style="margin-top:14px; padding:16px;
+            border-radius:16px;
+            border:1px solid rgba(42,53,99,.6);
+            background: rgba(15,23,48,.35);
+            display:none;">
+
             <div style="opacity:.8; margin-bottom:6px;">الجواب:</div>
             <div id="aiAnswerText" style="white-space:pre-wrap; line-height:1.8;"></div>
           </div>
@@ -141,38 +153,53 @@
 
   </main>
 
-  <!-- Script (خارج الـ grid) -->
+  <!-- ✅ Script (محاكاة محلية بدون Worker) -->
   <script>
-    // مهم: على GitHub Pages لازم تحطي رابط Cloudflare Worker هنا
-const WORKER_URL = "https://holy-night-bea4.islamzakour730.workers.dev";
-
-    async function askAI(){
+    function askAI(){
       const q = document.getElementById('studentQuestion').value.trim();
-      if(!q) return;
-
       const box = document.getElementById('aiAnswer');
       const text = document.getElementById('aiAnswerText');
 
+      if(!q) return;
       box.style.display = "block";
-      text.textContent = "جاري توليد الإجابة...";
 
-      try{
-      const res = await fetch(WORKER_URL, {
-  method: "POST",
-  headers: {"Content-Type":"application/json"},
-  body: JSON.stringify({ question: q })
-});
-
-
-        if(!res.ok){
-          text.textContent = "صار خطأ بالاتصال (API).";
-          return;
-        }
-
-        const data = await res.json();
-        text.textContent = data.answer || "ما وصلني جواب.";
-      }catch(e){
-        text.textContent = "تعذر الاتصال. افحصي رابط الـ Worker أو الاستضافة.";
+      // ردود تعليمية جاهزة (محاكاة)
+      if(q.includes("int") && q.includes("double")){
+        text.textContent =
+          "الفرق بين int و double:\n\n" +
+          "• int يُستخدم لتخزين أعداد صحيحة مثل 5 أو 10.\n" +
+          "• double يُستخدم لتخزين أعداد تحتوي على فاصلة عشرية مثل 3.14.\n\n" +
+          "مثال:\nint x = 5;\ndouble y = 3.5;";
+      }
+      else if(q.toLowerCase().includes("osi") || q.includes("OSI")){
+        text.textContent =
+          "نموذج OSI يتكوّن من 7 طبقات، كل طبقة لها وظيفة:\n\n" +
+          "1) Physical: نقل الإشارات.\n" +
+          "2) Data Link: تنظيم الإطارات.\n" +
+          "3) Network: تحديد المسار (IP).\n" +
+          "4) Transport: نقل البيانات (TCP/UDP).\n" +
+          "5) Session: إدارة الجلسات.\n" +
+          "6) Presentation: تنسيق/تشفير البيانات.\n" +
+          "7) Application: خدمات التطبيقات (HTTP...).";
+      }
+      else if(q.includes("LAN") || q.includes("WAN")){
+        text.textContent =
+          "LAN شبكة محلية داخل مدرسة/بيت.\n" +
+          "WAN شبكة واسعة تربط مدن/دول (مثل الإنترنت).";
+      }
+      else if(q.includes("for")){
+        text.textContent =
+          "حلقة for تُستخدم لتكرار أمر عدد محدد من المرات.\n\n" +
+          "مثال:\nfor(int i=1; i<=5; i++){\n  Console.WriteLine(i);\n}";
+      }
+      else{
+        text.textContent =
+          "هذا نموذج توضيحي لمساعد ذكاء اصطناعي داخل الوحدة.\n\n" +
+          "جرّب تسأل:\n" +
+          "• ما الفرق بين int و double؟\n" +
+          "• اشرح OSI.\n" +
+          "• ما الفرق بين LAN و WAN؟\n" +
+          "• اعطني مثال for في C#.";
       }
     }
   </script>
