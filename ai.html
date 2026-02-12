@@ -144,7 +144,7 @@
   <!-- Script (خارج الـ grid) -->
   <script>
     // مهم: على GitHub Pages لازم تحطي رابط Cloudflare Worker هنا
-    const WORKER_URL = "PUT_YOUR_WORKER_URL_HERE";
+const WORKER_URL = "https://holy-night-bea4.islamzakour730.workers.dev";
 
     async function askAI(){
       const q = document.getElementById('studentQuestion').value.trim();
@@ -157,11 +157,12 @@
       text.textContent = "جاري توليد الإجابة...";
 
       try{
-        const res = await fetch(WORKER_URL, {
-          method: "POST",
-          headers: {"Content-Type":"application/json"},
-          body: JSON.stringify({ question: q })
-        });
+      const res = await fetch(WORKER_URL, {
+  method: "POST",
+  headers: {"Content-Type":"application/json"},
+  body: JSON.stringify({ question: q })
+});
+
 
         if(!res.ok){
           text.textContent = "صار خطأ بالاتصال (API).";
