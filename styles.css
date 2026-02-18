@@ -435,4 +435,13 @@ tr:hover td{
   border:0;
   display:block;
 }
+.prompt-box{
+  margin-top:14px;
+  padding:16px;
+  border-radius:16px;
+  border:1px dashed rgba(42,53,99,.7);
+  background: rgba(15,23,48,.35);
+  line-height:2;
+  white-space: pre-line;
+}
 
