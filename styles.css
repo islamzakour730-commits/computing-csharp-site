@@ -313,3 +313,25 @@ pre{
 .team-n .team-avatar{ background: linear-gradient(135deg, #ffb020, #ffd27a); }
 .team-z .team-avatar{ background: linear-gradient(135deg, #ff4da6, #ff8ac8); }
 
+.gamma-box{
+  display:flex;
+  flex-direction:column;
+  gap:30px;
+  align-items:center;
+}
+
+.gamma-item{
+  width:100%;
+  max-width:700px;
+  background: rgba(15,23,48,.6);
+  padding:18px;
+  border-radius:14px;
+  box-shadow:0 0 15px rgba(0,0,0,.3);
+  text-align:center;
+}
+
+.gamma-item img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:12px;
+}
