@@ -454,3 +454,41 @@ details summary{
 details summary:hover{
   background: rgba(15,23,48,.38);
 }
+.highlight-btn{
+  border-color: rgba(120,140,255,.8);
+  box-shadow: 0 0 0 1px rgba(120,140,255,.3);
+}
+
+.highlight-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(120,140,255,.25);
+}
+details{
+  transition:.2s ease;
+}
+
+details summary{
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(15,23,48,.28);
+  border:1px solid rgba(42,53,99,.55);
+  cursor:pointer;
+  position:relative;
+  font-weight:800;
+}
+
+details summary::after{
+  content:"▾";
+  position:absolute;
+  left:14px;
+  transition:.2s;
+}
+
+details[open] summary::after{
+  transform: rotate(180deg);
+}
+
+details summary:hover{
+  background: rgba(15,23,48,.45);
+  border-color: rgba(120,140,255,.6);
+}
