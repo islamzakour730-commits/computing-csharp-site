@@ -335,7 +335,6 @@ pre{
   display:block;
 }
 
-/* زر التشغيل بالنص */
 .play-overlay{
   position:absolute;
   top:50%;
@@ -353,9 +352,9 @@ pre{
   transition:0.3s;
 }
 
-/* تأثير hover 🔥 */
 .gamma-card:hover .play-overlay{
   background:#6c63ff;
   transform:translate(-50%,-50%) scale(1.1);
 }
+
 
