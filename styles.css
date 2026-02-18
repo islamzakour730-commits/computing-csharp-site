@@ -316,22 +316,46 @@ pre{
 .gamma-box{
   display:flex;
   flex-direction:column;
-  gap:30px;
+  gap:28px;
   align-items:center;
 }
 
-.gamma-item{
+.gamma-card{
+  position:relative;
   width:100%;
-  max-width:700px;
-  background: rgba(15,23,48,.6);
-  padding:18px;
+  max-width:750px;
+  display:block;
   border-radius:14px;
-  box-shadow:0 0 15px rgba(0,0,0,.3);
-  text-align:center;
+  overflow:hidden;
+  box-shadow:0 0 18px rgba(0,0,0,.35);
 }
 
-.gamma-item img{
+.gamma-card img{
   width:100%;
-  border-radius:10px;
-  margin-bottom:12px;
+  display:block;
 }
+
+/* زر التشغيل بالنص */
+.play-overlay{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:60px;
+  color:white;
+  background:rgba(0,0,0,0.45);
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+}
+
+/* تأثير hover 🔥 */
+.gamma-card:hover .play-overlay{
+  background:#6c63ff;
+  transform:translate(-50%,-50%) scale(1.1);
+}
+
