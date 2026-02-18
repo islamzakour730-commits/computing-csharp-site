@@ -393,4 +393,15 @@ tr:hover td{
   background: rgba(42,53,99,.35);
   transition:.2s;
 }
+.lesson-identity{
+  margin-top:10px;
+  font-size:15px;
+  color: var(--muted);
+  line-height:1.8;
+  background: rgba(42,53,99,.25);
+  border:1px solid rgba(42,53,99,.5);
+  padding:10px 14px;
+  border-radius:12px;
+  display:inline-block;
+}
 
