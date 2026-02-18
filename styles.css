@@ -445,3 +445,12 @@ tr:hover td{
   white-space: pre-line;
 }
 
+details summary{
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(15,23,48,.28);
+  border: 1px solid rgba(42,53,99,.5);
+}
+details summary:hover{
+  background: rgba(15,23,48,.38);
+}
