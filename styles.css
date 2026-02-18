@@ -147,11 +147,16 @@ body{
   font-weight:700;
   transition:.2s ease;
 }
-.btn:hover{ transform: translateY(-1px); }
+
+.btn:hover{
+  transform: translateY(-1px);
+}
+
 .btn.primary{
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   border-color: transparent;
 }
+
 .btn.ghost{
   background: transparent;
   border-color: rgba(42,53,99,.8);
@@ -171,10 +176,12 @@ body{
   padding: 18px;
   box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
+
 .card h2{
   margin:0 0 10px;
   font-size: 20px;
 }
+
 .card p{
   margin:0 0 10px;
   color: var(--muted);
@@ -357,4 +364,33 @@ pre{
   transform:translate(-50%,-50%) scale(1.1);
 }
 
+table{
+  width:100%;
+  border-collapse: collapse;
+  margin-top:10px;
+  overflow:hidden;
+  border-radius:14px;
+}
+
+th, td{
+  padding:12px;
+  text-align:center;
+}
+
+th{
+  background: rgba(42,53,99,.6);
+  color: var(--text);
+  font-weight:700;
+}
+
+td{
+  background: rgba(15,23,48,.45);
+  border-top:1px solid rgba(42,53,99,.5);
+  color: var(--text);
+}
+
+tr:hover td{
+  background: rgba(42,53,99,.35);
+  transition:.2s;
+}
 
